@@ -1,0 +1,28 @@
+# Minimal interactive profile for the cluster workspace.
+source ~/.bashrc 2>/dev/null || true
+
+export PATH="$HOME/miniconda3/envs/m3kg/bin:$PATH"
+export PYTHONPATH="$HOME/pylibs"
+cd "$HOME/mmgraph-agent" 2>/dev/null || true
+
+PS1='[集群] \u@\h:\w\$ '
+
+build() {
+  PYTHONPATH=src python scripts/build_hypergraph.py \
+    --config configs/cluster_local.toml \
+    --data-root data/smoke_zh \
+    --out out/mmkg_local.json
+}
+
+status() {
+  echo "--- tmux ---"
+  tmux ls 2>/dev/null || echo "no session"
+  echo "--- model service ---"
+  curl -s -m 3 http://127.0.0.1:18000/v1/models || echo "not running"
+  echo
+  echo "--- GPU ---"
+  nvidia-smi --query-gpu=index,name,memory.used,memory.total,utilization.gpu \
+    --format=csv,noheader
+}
+
+echo "Type 'build' to rebuild, 'status' to inspect, 'exit' to leave."

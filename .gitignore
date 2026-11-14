@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.env
+
+# Test / tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local artefacts / outputs
+out/
+runs/
+*.log
+*.html
+kg.json
+kg.meta.json
+!data/**/*.html
+
+# External dictionaries (download with scripts/fetch_icd10.sh; check its license)
+data/icd10/*
+!data/icd10/diseases.sample6.json
+
+# Local-only launchers (machine-specific Python path)
+*_local.bat
+
+# Private / local data
+data/patient*/
+data/private/
+*.pem
+*.key
+id_rsa*
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+.DS_Store

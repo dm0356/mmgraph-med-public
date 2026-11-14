@@ -1,0 +1,83 @@
+# Ollama profile: one OpenAI-compatible server on :11434.
+#
+# Use this when the cluster NVIDIA driver is too old for a CUDA-13 vLLM build.
+# Ollama bundles its own CUDA runtime and works with driver 535+.
+#
+#   ollama serve
+#   ollama pull qwen2.5:7b
+#   ollama pull qwen2.5vl:7b
+#   ollama pull bge-m3
+#
+# See docs/LOCAL_DEPLOYMENT.md section 10.
+
+[project]
+name = "mmgraph-agent-ollama"
+
+[hypergraph]
+parser = "regex"
+embedder = "api"
+embed_dim = 1024
+max_entities_per_unit = 12
+modalities = ["text", "image", "table", "diagram"]
+
+[embedding]
+base_url = "http://127.0.0.1:11434/v1/embeddings"
+model = "bge-m3"
+api_key_env = "MMGRAPH_EMBED_API_KEY"
+dim = 1024
+timeout = 120
+
+[extractor]
+mode = "llm"
+language = "zh"
+base_url = "http://127.0.0.1:11434/v1/chat/completions"
+model = "qwen2.5:7b"
+api_key_env = "LOCAL_LLM_KEY"
+temperature = 0.0
+timeout = 180
+max_retries = 2
+cache_dir = "out/.extract_cache"
+
+[captioner]
+enabled = true
+provider = "local"
+model = "qwen2.5vl:7b"
+base_url = "http://127.0.0.1:11434/v1/chat/completions"
+api_key_env = "LOCAL_VLM_KEY"
+timeout = 300
+temperature = 0.0
+prompt = "请用一句中文描述这张医学图像的关键内容。"
+
+[construction]
+enabled = true
+rewriter = true
+grounding = true
+refinement = true
+inspector = false
+
+[grounding]
+searcher = "local"
+local_path = "data/glossary/medical_terms.sample.tsv"
+max_candidates = 1
+
+[memory]
+C = 5
+L_max = 1200
+L_dig = 300
+L_cap = 5000
+
+[retrieval]
+top_k = 5
+distance_threshold = 0.05
+enable_web = false
+hops = 1
+
+[policy]
+max_rounds = 5
+regulator_base = 0.5
+structural_penalty = 0.5
+well_formed_required = true
+
+[eval]
+datasets = ["smoke"]
+metric = "token_f1"

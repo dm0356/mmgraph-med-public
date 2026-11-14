@@ -1,0 +1,401 @@
+{
+ "patient_id": {
+  "label_cn": "患者编号",
+  "source": "structured",
+  "maars_branch": "",
+  "schema_path": "patient_id",
+  "extraction_variable": ""
+ },
+ "encounter_id": {
+  "label_cn": "住院/就诊编号",
+  "source": "structured",
+  "maars_branch": "",
+  "schema_path": "encounter_id",
+  "extraction_variable": ""
+ },
+ "split": {
+  "label_cn": "数据划分",
+  "source": "structured",
+  "maars_branch": "",
+  "schema_path": "split",
+  "extraction_variable": ""
+ },
+ "age": {
+  "label_cn": "年龄",
+  "source": "structured",
+  "maars_branch": "EHR",
+  "schema_path": "demographics.age",
+  "extraction_variable": ""
+ },
+ "sex": {
+  "label_cn": "性别",
+  "source": "structured",
+  "maars_branch": "EHR",
+  "schema_path": "demographics.sex",
+  "extraction_variable": ""
+ },
+ "BMI": {
+  "label_cn": "体重指数",
+  "source": "structured",
+  "maars_branch": "EHR",
+  "schema_path": "demographics.bmi",
+  "extraction_variable": ""
+ },
+ "hypertension": {
+  "label_cn": "高血压",
+  "source": "structured",
+  "maars_branch": "EHR",
+  "schema_path": "diagnoses",
+  "extraction_variable": ""
+ },
+ "diabetes": {
+  "label_cn": "糖尿病",
+  "source": "structured",
+  "maars_branch": "EHR",
+  "schema_path": "diagnoses",
+  "extraction_variable": ""
+ },
+ "AF": {
+  "label_cn": "心房颤动",
+  "source": "structured",
+  "maars_branch": "EHR",
+  "schema_path": "diagnoses",
+  "extraction_variable": "AF"
+ },
+ "NSVT": {
+  "label_cn": "非持续性室速",
+  "source": "report",
+  "maars_branch": "EHR",
+  "schema_path": "notes",
+  "extraction_variable": "NSVT"
+ },
+ "syncope": {
+  "label_cn": "晕厥",
+  "source": "report",
+  "maars_branch": "EHR",
+  "schema_path": "notes",
+  "extraction_variable": "syncope"
+ },
+ "presyncope": {
+  "label_cn": "先兆晕厥",
+  "source": "report",
+  "maars_branch": "EHR",
+  "schema_path": "notes",
+  "extraction_variable": "presyncope"
+ },
+ "family_history_SCD": {
+  "label_cn": "猝死家族史",
+  "source": "report",
+  "maars_branch": "EHR",
+  "schema_path": "notes",
+  "extraction_variable": "family_history_SCD"
+ },
+ "dyslipidemia": {
+  "label_cn": "高脂血症",
+  "source": "structured",
+  "maars_branch": "EHR",
+  "schema_path": "diagnoses",
+  "extraction_variable": "dyslipidemia"
+ },
+ "angina": {
+  "label_cn": "心绞痛",
+  "source": "report",
+  "maars_branch": "EHR",
+  "schema_path": "notes",
+  "extraction_variable": "angina"
+ },
+ "dyspnea": {
+  "label_cn": "呼吸困难/气短",
+  "source": "report",
+  "maars_branch": "EHR",
+  "schema_path": "notes",
+  "extraction_variable": "dyspnea"
+ },
+ "smoking": {
+  "label_cn": "吸烟史",
+  "source": "structured",
+  "maars_branch": "EHR",
+  "schema_path": "notes",
+  "extraction_variable": ""
+ },
+ "NYHA": {
+  "label_cn": "NYHA 心功能分级",
+  "source": "structured",
+  "maars_branch": "EHR",
+  "schema_path": "diagnoses",
+  "extraction_variable": ""
+ },
+ "prior_MI": {
+  "label_cn": "既往心肌梗死",
+  "source": "structured",
+  "maars_branch": "EHR",
+  "schema_path": "diagnoses",
+  "extraction_variable": ""
+ },
+ "prior_stroke": {
+  "label_cn": "既往脑卒中",
+  "source": "structured",
+  "maars_branch": "EHR",
+  "schema_path": "diagnoses",
+  "extraction_variable": ""
+ },
+ "beta_blocker": {
+  "label_cn": "β受体阻滞剂",
+  "source": "structured",
+  "maars_branch": "EHR",
+  "schema_path": "medications",
+  "extraction_variable": ""
+ },
+ "amiodarone": {
+  "label_cn": "胺碘酮",
+  "source": "structured",
+  "maars_branch": "EHR",
+  "schema_path": "medications",
+  "extraction_variable": ""
+ },
+ "ICD_device": {
+  "label_cn": "ICD/CRT-D 植入",
+  "source": "structured",
+  "maars_branch": "EHR",
+  "schema_path": "medications",
+  "extraction_variable": ""
+ },
+ "potassium": {
+  "label_cn": "血钾",
+  "source": "structured",
+  "maars_branch": "EHR",
+  "schema_path": "labs",
+  "extraction_variable": "potassium"
+ },
+ "NT_proBNP": {
+  "label_cn": "NT-proBNP",
+  "source": "structured",
+  "maars_branch": "EHR",
+  "schema_path": "labs",
+  "extraction_variable": "NT_proBNP"
+ },
+ "eGFR": {
+  "label_cn": "eGFR",
+  "source": "structured",
+  "maars_branch": "EHR",
+  "schema_path": "labs",
+  "extraction_variable": "eGFR"
+ },
+ "HbA1c": {
+  "label_cn": "糖化血红蛋白",
+  "source": "structured",
+  "maars_branch": "EHR",
+  "schema_path": "labs",
+  "extraction_variable": "HbA1c"
+ },
+ "LDL": {
+  "label_cn": "LDL-C",
+  "source": "structured",
+  "maars_branch": "EHR",
+  "schema_path": "labs",
+  "extraction_variable": "LDL"
+ },
+ "LVEF": {
+  "label_cn": "左室射血分数",
+  "source": "report",
+  "maars_branch": "CIR",
+  "schema_path": "echo[].lvef",
+  "extraction_variable": "LVEF"
+ },
+ "IVS_thickness": {
+  "label_cn": "室间隔厚度",
+  "source": "report",
+  "maars_branch": "CIR",
+  "schema_path": "echo[].ivs",
+  "extraction_variable": "IVS_thickness"
+ },
+ "LA_diameter": {
+  "label_cn": "左房内径",
+  "source": "report",
+  "maars_branch": "CIR",
+  "schema_path": "echo[].la",
+  "extraction_variable": "LA_diameter"
+ },
+ "LVEDV": {
+  "label_cn": "左室舒张末容积",
+  "source": "report",
+  "maars_branch": "CIR",
+  "schema_path": "echo[].lvedv",
+  "extraction_variable": "LVEDV"
+ },
+ "LVESV": {
+  "label_cn": "左室收缩末容积",
+  "source": "report",
+  "maars_branch": "CIR",
+  "schema_path": "echo[].lvesv",
+  "extraction_variable": "LVESV"
+ },
+ "LVOT_gradient": {
+  "label_cn": "左室流出道压差",
+  "source": "report",
+  "maars_branch": "CIR",
+  "schema_path": "echo[].lvot",
+  "extraction_variable": "LVOT_gradient"
+ },
+ "LGE_present": {
+  "label_cn": "LGE 延迟强化",
+  "source": "report",
+  "maars_branch": "CMR",
+  "schema_path": "cmr[].lge",
+  "extraction_variable": "LGE_present"
+ },
+ "LGE_percent": {
+  "label_cn": "LGE 占左室心肌百分比",
+  "source": "report",
+  "maars_branch": "CMR",
+  "schema_path": "cmr[].lge_percent",
+  "extraction_variable": "LGE_percent"
+ },
+ "LGE_pattern": {
+  "label_cn": "LGE 分布模式",
+  "source": "report",
+  "maars_branch": "CMR",
+  "schema_path": "cmr[].lge_pattern",
+  "extraction_variable": "LGE_pattern"
+ },
+ "SAM": {
+  "label_cn": "二尖瓣收缩期前向运动",
+  "source": "report",
+  "maars_branch": "CIR",
+  "schema_path": "echo[].sam",
+  "extraction_variable": "SAM"
+ },
+ "thrombus": {
+  "label_cn": "心腔内血栓",
+  "source": "report",
+  "maars_branch": "CIR",
+  "schema_path": "echo[].thrombus",
+  "extraction_variable": "thrombus"
+ },
+ "pericardial_effusion": {
+  "label_cn": "心包积液",
+  "source": "report",
+  "maars_branch": "CIR",
+  "schema_path": "echo[].pericardial_effusion",
+  "extraction_variable": "pericardial_effusion"
+ },
+ "mitral_regurgitation": {
+  "label_cn": "二尖瓣反流程度",
+  "source": "report",
+  "maars_branch": "CIR",
+  "schema_path": "echo[].mr",
+  "extraction_variable": "mitral_regurgitation"
+ },
+ "TR_severity": {
+  "label_cn": "三尖瓣反流程度",
+  "source": "report",
+  "maars_branch": "CIR",
+  "schema_path": "echo[].tr",
+  "extraction_variable": "TR_severity"
+ },
+ "wall_motion_abnormal": {
+  "label_cn": "室壁运动异常",
+  "source": "report",
+  "maars_branch": "CIR",
+  "schema_path": "echo[].wall_motion",
+  "extraction_variable": "wall_motion_abnormal"
+ },
+ "RV_dysfunction": {
+  "label_cn": "右室收缩功能减低",
+  "source": "report",
+  "maars_branch": "CIR",
+  "schema_path": "echo[].rv",
+  "extraction_variable": "RV_dysfunction"
+ },
+ "HR": {
+  "label_cn": "心率",
+  "source": "report",
+  "maars_branch": "CIR",
+  "schema_path": "ecg[].hr",
+  "extraction_variable": "HR"
+ },
+ "QRS": {
+  "label_cn": "QRS 时限",
+  "source": "report",
+  "maars_branch": "CIR",
+  "schema_path": "ecg[].qrs_ms",
+  "extraction_variable": "QRS"
+ },
+ "QTc": {
+  "label_cn": "QTc 间期",
+  "source": "report",
+  "maars_branch": "CIR",
+  "schema_path": "ecg[].qtc_ms",
+  "extraction_variable": "QTc"
+ },
+ "rhythm": {
+  "label_cn": "基础节律",
+  "source": "report",
+  "maars_branch": "CIR",
+  "schema_path": "ecg[].rhythm",
+  "extraction_variable": ""
+ },
+ "PVC": {
+  "label_cn": "室性早搏",
+  "source": "report",
+  "maars_branch": "CIR",
+  "schema_path": "ecg[].pvc",
+  "extraction_variable": "PVC"
+ },
+ "LGE_image_available": {
+  "label_cn": "是否有 LGE-CMR 原始图像",
+  "source": "image",
+  "maars_branch": "CMR",
+  "schema_path": "cmr[].path",
+  "extraction_variable": ""
+ },
+ "SCDA_event": {
+  "label_cn": "SCDA 事件",
+  "source": "structured",
+  "maars_branch": "",
+  "schema_path": "labels.event",
+  "extraction_variable": ""
+ },
+ "event_type": {
+  "label_cn": "事件类型",
+  "source": "structured",
+  "maars_branch": "",
+  "schema_path": "labels.event",
+  "extraction_variable": ""
+ },
+ "event_time": {
+  "label_cn": "事件时间",
+  "source": "structured",
+  "maars_branch": "",
+  "schema_path": "labels.event_time",
+  "extraction_variable": ""
+ },
+ "event_source": {
+  "label_cn": "事件来源",
+  "source": "structured",
+  "maars_branch": "",
+  "schema_path": "labels.event_source",
+  "extraction_variable": ""
+ },
+ "follow_up_days": {
+  "label_cn": "随访天数",
+  "source": "structured",
+  "maars_branch": "",
+  "schema_path": "labels.follow_up_days",
+  "extraction_variable": ""
+ },
+ "window_start": {
+  "label_cn": "时间窗开始",
+  "source": "structured",
+  "maars_branch": "",
+  "schema_path": "window.start",
+  "extraction_variable": ""
+ },
+ "window_end": {
+  "label_cn": "时间窗结束",
+  "source": "structured",
+  "maars_branch": "",
+  "schema_path": "window.end",
+  "extraction_variable": ""
+ }
+}

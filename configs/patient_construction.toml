@@ -1,0 +1,74 @@
+# Patient pilot with M3KG-style construction stages enabled (2 documents).
+# Uses local Qwen2.5-7B + BGE-M3 via scripts/serve_local.py.
+
+[project]
+name = "mmgraph-agent-patient-construction"
+
+[hypergraph]
+parser = "regex"
+embedder = "api"
+embed_dim = 1024
+max_entities_per_unit = 16
+modalities = ["text", "table", "diagram"]
+
+[embedding]
+base_url = "http://127.0.0.1:18000/v1/embeddings"
+model = "bge-m3"
+api_key_env = "MMGRAPH_EMBED_API_KEY"
+dim = 1024
+timeout = 120
+
+[extractor]
+mode = "llm"
+language = "zh"
+base_url = "http://127.0.0.1:18000/v1/chat/completions"
+model = "qwen2.5-7b"
+api_key_env = "LOCAL_LLM_KEY"
+temperature = 0.0
+timeout = 900
+max_retries = 1
+cache_dir = "out/.extract_cache"
+
+[captioner]
+enabled = false
+
+[image]
+embedder = "clip"
+model = "openai/clip-vit-base-patch32"   # MMGRAPH_CLIP_MODEL overrides (local snapshot)
+dim = 512
+device = "cpu"
+
+[construction]
+enabled = true
+rewriter = true
+grounding = true
+refinement = true
+inspector = false
+
+[grounding]
+searcher = "icd10"
+icd10_path = "data/icd10/diseases.json"
+max_candidates = 3
+
+[memory]
+C = 5
+L_max = 1200
+L_dig = 300
+L_cap = 5000
+
+[retrieval]
+top_k = 5
+distance_threshold = 0.05
+enable_web = false
+hops = 1
+cross_modal = true
+
+[policy]
+max_rounds = 5
+regulator_base = 0.5
+structural_penalty = 0.5
+well_formed_required = true
+
+[eval]
+datasets = ["smoke"]
+metric = "token_f1"

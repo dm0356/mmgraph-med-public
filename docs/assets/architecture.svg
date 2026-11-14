@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1080" viewBox="0 0 1600 1080">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#666666"/></marker></defs>
+<text x="40" y="58" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="bold" fill="#1F2937">MMGraph-Med: a four-paper fusion pipeline</text>
+<text x="40" y="108" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" fill="#4B5563">Construction (M3KG-RAG)  ->  Hypergraph + Memory (MMGraph-Agent)  ->  multi-hop retrieval  ->  policy (heuristic / GRPO reward)</text>
+<rect x="40" y="150" width="320" height="90" rx="14" fill="#E8F1FB" stroke="#4A90D9" stroke-width="3"/>
+<text x="102.0" y="190.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" fill="#1F2937">Clinical documents</text>
+<text x="116.5" y="218.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#374151">text · tables · images</text>
+<rect x="420" y="150" width="300" height="90" rx="14" fill="#E8F1FB" stroke="#4A90D9" stroke-width="3"/>
+<text x="536.5" y="190.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" fill="#1F2937">Parser</text>
+<text x="484.5" y="218.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#374151">modality-tagged units</text>
+<rect x="60" y="350" width="270" height="100" rx="14" fill="#FFF4E5" stroke="#E8A33D" stroke-width="3"/>
+<text x="140.5" y="395.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" fill="#1F2937">1. Rewriter</text>
+<text x="111.5" y="423.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#374151">context-enriched text</text>
+<rect x="360" y="350" width="270" height="100" rx="14" fill="#FFF4E5" stroke="#E8A33D" stroke-width="3"/>
+<text x="356.0" y="395.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" fill="#1F2937">2. Context-aware extraction</text>
+<text x="422.0" y="423.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#374151">entities + relations</text>
+<rect x="660" y="350" width="270" height="100" rx="14" fill="#FFF4E5" stroke="#E8A33D" stroke-width="3"/>
+<text x="727.5" y="395.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" fill="#1F2937">3. Normalizer</text>
+<text x="727.5" y="423.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#374151">canonical names</text>
+<rect x="960" y="350" width="270" height="100" rx="14" fill="#FFF4E5" stroke="#E8A33D" stroke-width="3"/>
+<text x="994.0" y="395.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" fill="#1F2937">4. ICD-10 grounding</text>
+<text x="1012.5" y="423.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#374151">codes + descriptions</text>
+<rect x="1260" y="350" width="280" height="100" rx="14" fill="#FFF4E5" stroke="#E8A33D" stroke-width="3"/>
+<text x="1272.0" y="395.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" fill="#1F2937">5. Description refinement</text>
+<text x="1314.0" y="423.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#374151">context-aware rewrite</text>
+<rect x="40" y="530" width="300" height="100" rx="14" fill="#E8F8EE" stroke="#3AA76D" stroke-width="3"/>
+<text x="126.0" y="575.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" fill="#1F2937">Embeddings</text>
+<text x="104.5" y="603.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#374151">BGE-M3 · CLIP (text)</text>
+<rect x="380" y="530" width="340" height="100" rx="14" fill="#E8F8EE" stroke="#3AA76D" stroke-width="3"/>
+<text x="451.5" y="562.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" fill="#1F2937">Hypergraph builder</text>
+<text x="480.0" y="590.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#374151">n-ary hyperedges</text>
+<text x="497.0" y="616.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#374151">+ image links</text>
+<rect x="760" y="530" width="300" height="100" rx="14" fill="#E8F8EE" stroke="#3AA76D" stroke-width="3"/>
+<text x="883.0" y="562.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" fill="#1F2937">Store</text>
+<text x="844.5" y="590.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#374151">entities · images</text>
+<text x="863.0" y="616.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#374151">hyperedges</text>
+<rect x="1110" y="530" width="340" height="100" rx="14" fill="#F3E8FF" stroke="#8E44AD" stroke-width="3"/>
+<text x="1143.0" y="575.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" fill="#1F2937">ai-knowledge-graph viewer</text>
+<text x="1197.0" y="603.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#374151">self-contained HTML</text>
+<rect x="40" y="720" width="300" height="100" rx="14" fill="#E8F8EE" stroke="#3AA76D" stroke-width="3"/>
+<text x="84.0" y="765.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" fill="#1F2937">L1/L2 cache memory</text>
+<text x="103.0" y="793.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#374151">truncate · digest · cap</text>
+<rect x="380" y="720" width="300" height="100" rx="14" fill="#E8F8EE" stroke="#3AA76D" stroke-width="3"/>
+<text x="437.5" y="765.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" fill="#1F2937">Multi-hop retrieval</text>
+<text x="471.5" y="793.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#374151">shared entities</text>
+<rect x="720" y="720" width="300" height="100" rx="14" fill="#FDE8E8" stroke="#C0392B" stroke-width="3"/>
+<text x="838.5" y="765.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" fill="#1F2937">Policy</text>
+<text x="772.5" y="793.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#374151">heuristic / GRPO reward</text>
+<rect x="1060" y="720" width="300" height="100" rx="14" fill="#EAF2F8" stroke="#2C3E50" stroke-width="3"/>
+<text x="1171.5" y="765.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="bold" fill="#1F2937">Answer</text>
+<text x="1132.5" y="793.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#374151">grounded response</text>
+<path d="M360,195 L420,195" fill="none" stroke="#666666" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M330,400 L360,400" fill="none" stroke="#666666" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M630,400 L660,400" fill="none" stroke="#666666" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M930,400 L960,400" fill="none" stroke="#666666" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1230,400 L1260,400" fill="none" stroke="#666666" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M800,450 L800,500 L550,500 L550,530" fill="none" stroke="#666666" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M340,580 L380,580" fill="none" stroke="#666666" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M720,580 L760,580" fill="none" stroke="#666666" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1060,580 L1110,580" fill="none" stroke="#666666" stroke-width="3" stroke-dasharray="10,7" marker-end="url(#arrow)"/>
+<path d="M910,630 L910,675 L190,675 L190,720" fill="none" stroke="#666666" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M340,770 L380,770" fill="none" stroke="#666666" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M680,770 L720,770" fill="none" stroke="#666666" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1020,770 L1060,770" fill="none" stroke="#666666" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="60" y="332" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" fill="#1F2937">M3KG-RAG construction (context-rich)</text>
+<text x="40" y="1002" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" fill="#6B7280">Patient data stays on the local/cluster deployment; the official ICD-10 table is not redistributed.</text>
+</svg>

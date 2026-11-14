@@ -1,0 +1,38 @@
+mmgraph-agent
+=============
+
+This repository is an *independent reproduction* of the MMGraph-Agent
+framework and reuses ideas / scaffolding from the following upstream works.
+It is not a claim of original authorship over those components.
+
+Upstream projects
+-----------------
+1. ai-knowledge-graph (Apache-2.0)
+   Author : Robert McDermott
+   URL    : https://github.com/robert-mcdermott/ai-knowledge-graph
+   Role   : the base text-to-knowledge-graph toolkit this reproduction was
+            originally forked from; its Apache-2.0 licence is retained here.
+
+2. M3KG-RAG (CVPR 2026) - pipeline design inspiration
+   Authors: Hyeongcheol Park et al. (Korea University, Sungkyunkwan
+            University, NVIDIA Research, Hanwha Systems)
+   URL    : https://kuai-lab.github.io/cvpr2026m3kgrag/
+   Role   : multi-hop multimodal KG construction (rewriter / extractor /
+            normalizer / searcher / selector / refiner / inspector) and the
+            GRASP retrieval refinement idea.
+
+3. MMGraph-Agent (NeurIPS 2026) - the paper being reproduced
+   Authors: Haoran Luo et al.
+   URL    : https://github.com/LHRLAB/MMGraph-Agent
+   Role   : target framework. This repository re-implements its three
+            modules (zero-API hypergraph construction, cache-inspired
+            L1/L2 memory, GRPO retrieval-and-answer policy) from the paper.
+
+What this repository adds
+-------------------------
+The three-module reproduction (parser/encoder/builder/store, two-tier
+memory, action space + GRPO reward + heuristic demo policy), the CPU-only
+smoke pipeline, the evaluation harness, and the project scaffolding in
+`src/mmgraph_agent/`.
+
+The full Apache-2.0 licence text is in the LICENSE file.

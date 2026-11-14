@@ -1,0 +1,13 @@
+# GPU / cluster dependencies.
+# Install PyTorch separately with the CUDA wheel index first:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+#
+# Then:
+#   pip install -r requirements-gpu.txt
+#   pip install -e .
+
+numpy>=1.24
+transformers>=4.40
+accelerate>=0.30
+faiss-cpu>=1.7
+spacy>=3.7
